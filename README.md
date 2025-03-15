@@ -1,12 +1,19 @@
 # pe-2025-1
 Programação Estruturada 2025-1
 
-[Variáveis, Tipos e Operações](TBD)
+[Variáveis, Tipos e Operações](https://github.com/ufpi-pe/pe-2025-1/blob/main/variaveis.md)
 
-[Estruturas de Repetição](TBD)
+[Estruturas de Controle e Repetição](https://github.com/ufpi-pe/pe-2025-1/blob/main/loops.md)
 
-[Arrays e Matrizes](TBD)
+[Exercícios 1](https://github.com/ufpi-pe/pe-2025-1/blob/main/revisao1.md)
 
-[Funções em C](TBD)
+[Arrays e Matrizes](https://github.com/ufpi-pe/pe-2025-1/blob/main/array_matrizes.md)
 
-[Strings em C](TBD)
+[Funções em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/funcoes.md)
+
+[Strings em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/string.md)
+
+[Entrada e Saída de Dados Textos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/io_keyboard_terminal.md)
+
+[Tabela ASCII e formatação UTF-8](https://github.com/ufpi-pe/pe-2025-1/blob/main/ascii_utf8.md)
+
