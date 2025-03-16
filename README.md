@@ -7,6 +7,8 @@ Programação Estruturada 2025-1
 
 [Estruturas de Controle e Repetição](https://github.com/ufpi-pe/pe-2025-1/blob/main/loops.md)
 
+[Entrada e Saída de Dados Textos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/io_keyboard_terminal.md)
+
 [Exercícios 1](https://github.com/ufpi-pe/pe-2025-1/blob/main/revisao1.md)
 
 [Arrays e Matrizes](https://github.com/ufpi-pe/pe-2025-1/blob/main/array_matrizes.md)
@@ -15,7 +17,4 @@ Programação Estruturada 2025-1
 
 [Strings em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/string.md)
 
-[Entrada e Saída de Dados Textos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/io_keyboard_terminal.md)
-
 [Tabela ASCII e formatação UTF-8](https://github.com/ufpi-pe/pe-2025-1/blob/main/ascii_utf8.md)
-
