@@ -7,7 +7,7 @@ Programação Estruturada 2025-1
 
 [Estruturas de Controle e Repetição](https://github.com/ufpi-pe/pe-2025-1/blob/main/loops.md)
 
-[Entrada e Saída de Dados Textos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/io_keyboard_terminal.md)
+[Entrada e Saída de Dados Básicos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/io_keyboard_terminal.md)
 
 [Exercícios 1](https://github.com/ufpi-pe/pe-2025-1/blob/main/revisao1.md)
 
