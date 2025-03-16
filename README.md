@@ -1,6 +1,8 @@
 # pe-2025-1
 Programação Estruturada 2025-1
 
+## Módulo 1
+
 [Variáveis, Tipos e Operações](https://github.com/ufpi-pe/pe-2025-1/blob/main/variaveis.md)
 
 [Estruturas de Controle e Repetição](https://github.com/ufpi-pe/pe-2025-1/blob/main/loops.md)
