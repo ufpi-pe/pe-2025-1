@@ -230,10 +230,10 @@ void somarArrays(int arr1[], int arr2[], int resultado[], int tamanho) {
 }
 
 // Função para multiplicar duas matrizes
-void multiplicarMatrizes(int mat1[][3], int mat2[][3], int resultado[][3], int linhas) {
+void somarMatrizes(int mat1[][3], int mat2[][3], int resultado[][3], int linhas) {
     for (int i = 0; i < linhas; i++) {
         for (int j = 0; j < 3; j++) {
-            resultado[i][j] = mat1[i][j] * mat2[i][j];
+            resultado[i][j] = mat1[i][j] + mat2[i][j];
         }
     }
 }
@@ -261,9 +261,9 @@ int main() {
         {3, 3, 3}
     };
     int resultadoMat[2][3];
-    multiplicarMatrizes(mat1, mat2, resultadoMat, 2);
+    somarMatrizes(mat1, mat2, resultadoMat, 2);
 
-    printf("Multiplicação das matrizes:\n");
+    printf("Soma das matrizes:\n");
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 3; j++) {
             printf("%d ", resultadoMat[i][j]);
@@ -278,9 +278,9 @@ int main() {
 **Saída:**
 ```
 Soma dos arrays: 5 7 9 
-Multiplicação das matrizes:
-2 4 6 
-12 15 18 
+Soma das matrizes:
+3 4 5 
+7 8 9 
 ```
 
 ---
