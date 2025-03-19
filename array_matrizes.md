@@ -229,7 +229,7 @@ void somarArrays(int arr1[], int arr2[], int resultado[], int tamanho) {
     }
 }
 
-// Função para multiplicar duas matrizes
+// Função para somar duas matrizes
 void somarMatrizes(int mat1[][3], int mat2[][3], int resultado[][3], int linhas) {
     for (int i = 0; i < linhas; i++) {
         for (int j = 0; j < 3; j++) {
