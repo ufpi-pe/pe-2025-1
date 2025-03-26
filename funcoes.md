@@ -384,7 +384,179 @@ int main() {
 }
 ```
 
+## **Menu de Opções em C usando Funções**
+
+Aqui está um exemplo completo de um programa em C que usa funções para criar um menu interativo com 4 opções (1, 2, 3 e 4 para sair). Se o usuário digitar uma opção inválida, o programa exibe uma mensagem de erro e pede novamente a entrada.
+
+```c
+#include <stdio.h>
+
+// Funções das opções
+void opcao1() {
+    printf("Você escolheu a Opção 1!\n");
+}
+
+void opcao2() {
+    printf("Você escolheu a Opção 2!\n");
+}
+
+void opcao3() {
+    printf("Você escolheu a Opção 3!\n");
+}
+
+// Função que exibe o menu
+void exibirMenu() {
+    printf("\n----- MENU -----\n");
+    printf("1. Opção 1\n");
+    printf("2. Opção 2\n");
+    printf("3. Opção 3\n");
+    printf("4. Sair\n");
+}
+
+int main() {
+    int escolha;
+
+    do {
+        exibirMenu();
+        printf("Digite sua opção: ");
+        scanf("%d", &escolha);
+
+        switch (escolha) {
+            case 1:
+                opcao1();
+                break;
+            case 2:
+                opcao2();
+                break;
+            case 3:
+                opcao3();
+                break;
+            case 4:
+                printf("Saindo do programa...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while (escolha != 4); // Repete até o usuário escolher sair (4)
+
+    return 0;
+}
+
+```
+
 ---
+
+## **Como Funciona?**
+1. **`exibirMenu()`** → Mostra as opções disponíveis.
+2. **`main()`** →  
+   - Usa um loop `do-while` para repetir até o usuário digitar **4 (Sair)**.
+   - Lê a entrada do usuário (`scanf`) e usa `switch` para chamar a função correspondente.
+   - Se a opção for inválida (`default`), imprime uma mensagem de erro.
+3. **`opcao1()`, `opcao2()`, `opcao3()`** → Funções que executam ações específicas (aqui apenas imprimem mensagens, mas podem ser expandidas).
+
+---
+
+## **Exemplo de Saída**
+```
+----- MENU -----
+1. Opção 1
+2. Opção 2
+3. Opção 3
+4. Sair
+Digite sua opção: 1
+Você escolheu a Opção 1!
+
+----- MENU -----
+1. Opção 1
+2. Opção 2
+3. Opção 3
+4. Sair
+Digite sua opção: 5
+Opção inválida! Tente novamente.
+
+----- MENU -----
+1. Opção 1
+2. Opção 2
+3. Opção 3
+4. Sair
+Digite sua opção: 4
+Saindo do programa...
+```
+
+---
+
+## Alterando o programa para permitir a leitura de caracteres
+
+```c
+#include <stdio.h>
+#include <ctype.h> // Para a função tolower()
+
+// Funções das opções
+void opcao1() {
+    printf("Você escolheu a Opção A!\n");
+}
+
+void opcao2() {
+    printf("Você escolheu a Opção B!\n");
+}
+
+void opcao3() {
+    printf("Você escolheu a Opção C!\n");
+}
+
+// Função que exibe o menu
+void exibirMenu() {
+    printf("\n----- MENU -----\n");
+    printf("A. Opção A\n");
+    printf("B. Opção B\n");
+    printf("C. Opção C\n");
+    printf("S. Sair\n");
+}
+
+int main() {
+    char escolha;
+
+    do {
+        exibirMenu();
+        printf("Digite sua opção: ");
+        scanf(" %c", &escolha);  // Espaço antes do %c para ignorar whitespace
+        escolha = tolower(escolha); // Converte para minúsculo
+
+        switch (escolha) {
+            case 'a':
+                opcao1();
+                break;
+            case 'b':
+                opcao2();
+                break;
+            case 'c':
+                opcao3();
+                break;
+            case 's':
+                printf("Saindo do programa...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+        
+        // Limpa o buffer de entrada
+        while(getchar() != '\n');
+        
+    } while (escolha != 's');
+
+    return 0;
+}
+```
+
+### Funcionamento do Programa:
+
+- Exibe menu com opções A, B, C e S (sair)
+- Lê um caractere do usuário
+- Converte para minúsculo (aceita 'A' ou 'a')
+- Executa a função correspondente ou sai do programa
+- Repete até o usuário digitar 's' ou 'S'
+
+Esta versão é mais adequada para menus baseados em letras e trata melhor a entrada de caracteres.
 
 ### **Resumo**
 
