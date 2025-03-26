@@ -124,7 +124,7 @@ int main() {
 **Explicação:**
 - **Caso base:** Se `n` for 0, o fatorial é 1.
 - **Caso recursivo:** Se `n` for diferente de 0, o fatorial de `n` é `n * fatorial(n - 1)`.
-- 
+  
 **Fatorial de um número usando loop (for)**
 
 ```c
@@ -225,6 +225,18 @@ int main() {
 2. **Passagem por Referência:**
    - O endereço de memória da variável é passado para a função.
    - Modificações afetam o valor original.
+
+Em **C**, um **ponteiro** é uma variável que armazena o **endereço de memória** de outra variável. Ele "aponta" para a localização onde um valor está guardado na memória RAM do computador, permitindo acesso e modificação indireta desse dado. Ponteiros são usados para manipular estruturas complexas (como arrays e strings), passar argumentos por referência (modificando o valor original) e alocar memória dinamicamente (com `malloc` e `free`).  
+
+**Exemplo simples:**  
+```c
+int x = 10;
+int *ptr = &x; // ptr armazena o endereço de x
+printf("%d", *ptr); // Imprime 10 (valor no endereço apontado)
+```  
+
+Em resumo, ponteiros são ferramentas poderosas que dão controle direto sobre a memória, mas exigem cuidado para evitar erros como acesso inválido ou vazamentos.
+   
 
 **Exemplo:**
 ```c
