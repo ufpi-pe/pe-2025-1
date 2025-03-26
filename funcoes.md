@@ -124,6 +124,31 @@ int main() {
 **Explicação:**
 - **Caso base:** Se `n` for 0, o fatorial é 1.
 - **Caso recursivo:** Se `n` for diferente de 0, o fatorial de `n` é `n * fatorial(n - 1)`.
+- 
+**Fatorial de um número usando loop (for)**
+
+```c
+#include <stdio.h>
+
+// Função iterativa para calcular o fatorial usando loop
+int fatorial(int n) {
+    int resultado = 1; // Inicializa o resultado com 1 (fatorial de 0 e 1 é 1)
+    
+    // Loop que multiplica os números de 1 até n
+    for (int i = 1; i <= n; i++) {
+        resultado *= i; // Equivalente a: resultado = resultado * i
+    }
+    
+    return resultado;
+}
+
+int main() {
+    int numero = 5;
+    int resultado = fatorial(numero); // Chamada da função
+    printf("Fatorial de %d: %d\n", numero, resultado); // Saída: 120
+    return 0;
+}
+```
 
 ---
 
