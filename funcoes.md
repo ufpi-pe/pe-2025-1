@@ -363,7 +363,7 @@ int main() {
 
 ---
 
-## **Exemplo Completo: Calculando a Hipotenusa**
+### **Exemplo : Calculando a Hipotenusa**
 ```c
 #include <stdio.h>
 #include <math.h>
