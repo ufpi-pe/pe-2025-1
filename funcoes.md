@@ -230,9 +230,16 @@ Em **C**, um **ponteiro** é uma variável que armazena o **endereço de memóri
 
 **Exemplo simples:**  
 ```c
-int x = 10;
-int *ptr = &x; // ptr armazena o endereço de x
-printf("%d", *ptr); // Imprime 10 (valor no endereço apontado)
+#include <stdio.h>
+
+int main(){
+    int x = 10;
+    int *ptr = &x; // ptr armazena o endereço de x
+    printf("%p", ptr); // Imprime o endereco da celula que guarda o valor 10
+    printf("\n");
+    printf("%d", *ptr); // Imprime 10 (valor no endereço apontado)
+    return 0;
+}
 ```  
 
 Em resumo, ponteiros são ferramentas poderosas que dão controle direto sobre a memória, mas exigem cuidado para evitar erros como acesso inválido ou vazamentos.
