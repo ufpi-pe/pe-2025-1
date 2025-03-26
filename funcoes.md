@@ -219,6 +219,136 @@ int main() {
 
 ---
 
+## **Funções Matemáticas e a Biblioteca math.h em C**
+
+**Introdução à Biblioteca math.h**
+
+A linguagem C oferece uma biblioteca padrão chamada **math.h**, que contém uma variedade de funções matemáticas prontas para uso. Essa biblioteca é útil para realizar operações matemáticas avançadas, como cálculos trigonométricos, exponenciais, logarítmicos, arredondamentos e muito mais.
+
+Para utilizar essas funções, é necessário incluir a biblioteca no início do código:
+```c
+#include <math.h>
+```
+Além disso, ao compilar programas que usam `math.h`, pode ser necessário linkar a biblioteca matemática com a flag `-lm`:
+```sh
+gcc meu_programa.c -o meu_programa -lm
+```
+
+---
+
+## **Principais Funções da math.h**
+Aqui estão algumas das funções mais utilizadas da biblioteca `math.h`:
+
+### **1. Funções Trigonométricas**
+- `sin(x)` → Retorna o seno de um ângulo em radianos.
+- `cos(x)` → Retorna o cosseno de um ângulo em radianos.
+- `tan(x)` → Retorna a tangente de um ângulo em radianos.
+- `asin(x)` → Retorna o arco-seno (inverso do seno) em radianos.
+- `acos(x)` → Retorna o arco-cosseno (inverso do cosseno) em radianos.
+- `atan(x)` → Retorna o arco-tangente (inverso da tangente) em radianos.
+
+**Exemplo:**
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double angulo = 45.0;
+    double radianos = angulo * (M_PI / 180.0); // Converte graus para radianos
+    printf("Seno de %.2f graus: %.2f\n", angulo, sin(radianos));
+    return 0;
+}
+```
+
+### **2. Funções Exponenciais e Logarítmicas**
+- `exp(x)` → Retorna o valor de **e^x** (exponencial).
+- `log(x)` → Retorna o logaritmo natural (base *e*) de `x`.
+- `log10(x)` → Retorna o logaritmo na base 10 de `x`.
+- `pow(x, y)` → Retorna **x^y** (x elevado a y).
+
+**Exemplo:**
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double base = 2.0, expoente = 3.0;
+    printf("%.2f elevado a %.2f = %.2f\n", base, expoente, pow(base, expoente));
+    return 0;
+}
+```
+
+### **3. Funções de Arredondamento e Valor Absoluto**
+- `ceil(x)` → Arredonda para cima (retorna o menor inteiro maior ou igual a `x`).
+- `floor(x)` → Arredonda para baixo (retorna o maior inteiro menor ou igual a `x`).
+- `fabs(x)` → Retorna o valor absoluto (módulo) de `x` (para números reais).
+- `abs(x)` → Retorna o valor absoluto de um inteiro (da biblioteca `stdlib.h`).
+
+**Exemplo:**
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double num = 3.7;
+    printf("Arredondando %.2f para cima: %.2f\n", num, ceil(num));
+    printf("Arredondando %.2f para baixo: %.2f\n", num, floor(num));
+    printf("Valor absoluto de -%.2f: %.2f\n", num, fabs(-num));
+    return 0;
+}
+```
+
+### **4. Raiz Quadrada e Outras Funções**
+- `sqrt(x)` → Retorna a raiz quadrada de `x`.
+- `hypot(x, y)` → Retorna a hipotenusa de um triângulo retângulo com catetos `x` e `y` (equivalente a `sqrt(x² + y²)`).
+
+**Exemplo:**
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double numero = 25.0;
+    printf("Raiz quadrada de %.2f: %.2f\n", numero, sqrt(numero));
+    printf("Hipotenusa de catetos 3 e 4: %.2f\n", hypot(3, 4)); // Saída: 5.00
+    return 0;
+}
+```
+
+---
+
+## **Considerações Importantes**
+- **Tipo de dados:** A maioria das funções em `math.h` trabalha com `double`. Se você passar um `int` ou `float`, o compilador fará a conversão automaticamente, mas é recomendado usar `double` para maior precisão.
+- **Erros matemáticos:** Algumas funções (como `sqrt` ou `log`) podem gerar erros se receberem valores inválidos (ex: raiz de número negativo). Nesses casos, a função pode retornar um valor especial como `NaN` (Not a Number) ou `INF` (infinito).
+- **Constantes matemáticas:** A biblioteca também define constantes úteis, como:
+  - `M_PI` → Valor de π (pi).
+  - `M_E` → Valor de *e* (base do logaritmo natural).
+
+---
+
+## **Exemplo Completo: Calculando a Hipotenusa**
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double cateto1, cateto2, hipotenusa;
+    
+    printf("Digite o valor do primeiro cateto: ");
+    scanf("%lf", &cateto1);
+    
+    printf("Digite o valor do segundo cateto: ");
+    scanf("%lf", &cateto2);
+    
+    hipotenusa = hypot(cateto1, cateto2);
+    printf("A hipotenusa é: %.2f\n", hipotenusa);
+    
+    return 0;
+}
+```
+
+---
+
 ### **Resumo**
 
 - **Funções** em C são blocos de código reutilizáveis que ajudam a organizar e modularizar o programa.
