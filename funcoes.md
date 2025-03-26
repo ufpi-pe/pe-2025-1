@@ -384,6 +384,54 @@ int main() {
 }
 ```
 
+## Programa Calculadora Simples (sem usar funções)
+
+```c
+#include <stdio.h>
+
+int main() {
+    float num1, num2;
+    int opcao;
+    
+    printf("Calculadora Simples\n");
+    printf("Digite o primeiro número: ");
+    scanf("%f", &num1);
+    printf("Digite o segundo número: ");
+    scanf("%f", &num2);
+    
+    printf("\nOperações disponíveis:\n");
+    printf("1 - Soma\n");
+    printf("2 - Subtração\n");
+    printf("3 - Multiplicação\n");
+    printf("4 - Divisão\n");
+    printf("Escolha a operação (1-4): ");
+    scanf("%d", &opcao);
+    
+    switch(opcao) {
+        case 1:
+            printf("\nResultado: %.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
+            break;
+        case 2:
+            printf("\nResultado: %.2f - %.2f = %.2f\n", num1, num2, num1 - num2);
+            break;
+        case 3:
+            printf("\nResultado: %.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
+            break;
+        case 4:
+            if(num2 != 0) {
+                printf("\nResultado: %.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
+            } else {
+                printf("\nErro: Divisão por zero!\n");
+            }
+            break;
+        default:
+            printf("\nOpção inválida!\n");
+    }
+    
+    return 0;
+}
+```
+
 ## **Menu de Opções em C usando Funções**
 
 Aqui está um exemplo completo de um programa em C que usa funções para criar um menu interativo com 4 opções (1, 2, 3 e 4 para sair). Se o usuário digitar uma opção inválida, o programa exibe uma mensagem de erro e pede novamente a entrada.
