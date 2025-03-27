@@ -18,3 +18,15 @@ Programação Estruturada 2025-1
 [Strings em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/string.md)
 
 [Tabela ASCII e formatação UTF-8](https://github.com/ufpi-pe/pe-2025-1/blob/main/ascii_utf8.md)
+
+## Módulo 2
+
+[Ponteiros](TBD)
+
+[Funções e Arrays](TBD)
+
+[Estruturas em C (Struts)](TBD)
+
+[Alocação Dinâmica de Memória](TBD)
+
+
