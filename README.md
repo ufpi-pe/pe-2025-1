@@ -21,7 +21,7 @@ Programação Estruturada 2025-1
 
 ## Módulo 2
 
-[Ponteiros](TBD)
+[Ponteiros](https://github.com/ufpi-pe/pe-2025-1/blob/main/ponteiros.md)
 
 [Funções e Arrays](TBD)
 
