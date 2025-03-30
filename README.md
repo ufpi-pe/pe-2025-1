@@ -23,7 +23,7 @@ Programação Estruturada 2025-1
 
 [Ponteiros](https://github.com/ufpi-pe/pe-2025-1/blob/main/ponteiros.md)
 
-[Funções e Arrays](TBD)
+[Funções e Arrays](https://github.com/ufpi-pe/pe-2025-1/blob/main/funcoes_arrays.md)
 
 [Estruturas em C (Struts)](TBD)
 
