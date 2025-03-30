@@ -155,13 +155,13 @@ int main() {
 
 ---
 
-# **Exemplo 1: Acessando Endereços de Memória e Valores com Ponteiros em C**
+## **Acessando Endereços de Memória e Valores com Ponteiros em C**
 
 A seguir, demonstrarei como acessar os **endereços de memória** e os **primeiros elementos** de cada variável usando ponteiros em C.
 
 ---
 
-## **1. Variáveis Simples (`int`, `float`, `char`)**
+### **1. Variáveis Simples (`int`, `float`, `char`)**
 ```c
 #include <stdio.h>
 
@@ -211,7 +211,7 @@ int main() {
 
 ---
 
-## **2. Array de Inteiros (`int idades[]`)**
+### **2. Array de Inteiros (`int idades[]`)**
 ```c
 #include <stdio.h>
 
@@ -238,7 +238,7 @@ int main() {
 
 ---
 
-## **3. Matriz de Strings (`char nomes[3][50]`)**
+### **3. Matriz de Strings (`char nomes[3][50]`)**
 ```c
 #include <stdio.h>
 
@@ -269,7 +269,7 @@ int main() {
 
 ---
 
-## **4. Matriz de Floats (`float matrizTemperatura[3][4]`)**
+### **4. Matriz de Floats (`float matrizTemperatura[3][4]`)**
 ```c
 #include <stdio.h>
 
@@ -300,7 +300,7 @@ int main() {
 
 ---
 
-## **5. Programa Completo (Todos os Exemplos Juntos)**
+### **5. Programa Completo (Todos os Exemplos Juntos)**
 ```c
 #include <stdio.h>
 
@@ -353,6 +353,132 @@ int main() {
     return 0;
 }
 ```
+
+## Aritmética de Ponteiros em C**
+
+A aritmética de ponteiros permite navegar na memória de forma eficiente, especialmente útil para manipular **arrays**, **strings** e **estruturas de dados**. As operações básicas são:
+
+| **Operação**       | **Descrição**                                                                 | **Exemplo**                     |
+|--------------------|-------------------------------------------------------------------------------|---------------------------------|
+| `ptr + n`          | Avança `n` posições do tipo do ponteiro (`n * sizeof(tipo)`).                | `ptr + 1` (próximo elemento)    |
+| `ptr - n`          | Retrocede `n` posições do tipo do ponteiro.                                   | `ptr - 1` (elemento anterior)   |
+| `ptr++` / `ptr--`  | Incrementa/decrementa o ponteiro (pós-incremento).                           | `ptr++`                         |
+| `++ptr` / `--ptr`  | Incrementa/decrementa o ponteiro (pré-incremento).                           | `++ptr`                         |
+| `ptr1 - ptr2`      | Calcula a distância (em elementos) entre dois ponteiros do mesmo tipo.       | `ptr1 - ptr2`                   |
+| `*ptr`             | Acessa o valor no endereço apontado (dereferência).                          | `*ptr = 10;`                    |
+
+---
+
+### **Exemplos Práticos**
+
+**1. Navegação em Arrays**
+```c
+#include <stdio.h>
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+    int *ptr = nums; // Aponta para nums[0]
+
+    printf("Primeiro elemento: %d\n", *ptr);       // Saída: 10
+    printf("Segundo elemento: %d\n", *(ptr + 1));  // Saída: 20 (ptr + 1 avança 4 bytes)
+    printf("Terceiro elemento: %d\n", *(ptr + 2)); // Saída: 30
+
+    // Modificando valores via ponteiro
+    *(ptr + 1) = 99; // Altera nums[1] para 99
+    printf("Novo segundo elemento: %d\n", nums[1]); // Saída: 99
+
+    return 0;
+}
+```
+
+**2. Iteração em Strings**
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "Hello";
+    char *ptr = str;
+
+    while (*ptr != '\0') {
+        printf("%c ", *ptr); // Imprime cada caractere
+        ptr++; // Avança para o próximo caractere
+    }
+    // Saída: H e l l o
+
+    return 0;
+}
+```
+
+**3. Diferença entre Ponteiros**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr1 = &arr[1]; // Aponta para 20
+    int *ptr2 = &arr[4]; // Aponta para 50
+
+    printf("Distância entre ptr2 e ptr1: %ld elementos\n", ptr2 - ptr1); // Saída: 3
+    printf("Valor no ptr2: %d\n", *ptr2); // Saída: 50
+
+    return 0;
+}
+```
+
+**4. Ponteiros e Matrizes**
+```c
+#include <stdio.h>
+
+int main() {
+    int matriz[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    int *ptr = &matriz[0][0]; // Ponteiro para o primeiro elemento
+
+    // Acessando matriz[1][2] via aritmética de ponteiros
+    printf("matriz[1][2] = %d\n", *(ptr + (1 * 3) + 2)); // Saída: 6 (linha 1, coluna 2)
+
+    return 0;
+}
+```
+
+---
+
+**Regras Importantes**
+1. **Só é possível realizar aritmética com ponteiros do mesmo tipo**.
+   ```c
+   int *ptr1;
+   float *ptr2;
+   // ptr1 + ptr2; // ERRO: operação inválida!
+   ```
+2. **Incremento/decremento avança conforme o tamanho do tipo**.
+   - Se `int *ptr` avança `+1`, ele pula `4 bytes` (em sistemas 32/64 bits).
+3. **Ponteiros podem ser comparados** (`==`, `!=`, `<`, `>`).
+   ```c
+   if (ptr1 < ptr2) { /* ... */ }
+   ```
+
+---
+
+## **Aplicações Comuns**
+1. **Manipulação de arrays/strings sem índices**.
+2. **Passagem eficiente de arrays para funções**.
+   ```c
+   void soma(int *arr, int tamanho) {
+       for (int i = 0; i < tamanho; i++) {
+           printf("%d ", *(arr + i));
+       }
+   }
+   ```
+3. **Estruturas de dados dinâmicas** (listas ligadas, árvores).
+
+---
+
+**Dica:** Use `sizeof(tipo)` para entender quantos bytes um ponteiro avança.  
+Exemplo:  
+```c
+printf("sizeof(int) = %zu\n", sizeof(int)); // Saída típica: 4
+``` 
+
+Esses conceitos são essenciais para dominar C e otimizar o acesso a memória! 🚀
 
 ---
 
