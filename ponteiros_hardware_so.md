@@ -1,4 +1,4 @@
-2# **Diferenças no Uso de Ponteiros em C: Arquiteturas (32/64 bits) e Sistemas Operacionais (Linux, macOS, Windows)**
+**Diferenças no Uso de Ponteiros em C: Arquiteturas (32/64 bits) e Sistemas Operacionais (Linux, macOS, Windows)**
 
 Os ponteiros em C são afetados por **arquiteturas** (32 vs. 64 bits) e **sistemas operacionais** devido a diferenças em:
 - **Tamanho do ponteiro** (bytes ocupados na memória).
@@ -160,3 +160,21 @@ A arquitetura x86 é uma das mais predominantes no mundo da computação, especi
 * A arquitetura de 32 bits está gradualmente sendo descontinuada, mas ainda é relevante em alguns cenários específicos.
 
 Em resumo, a transição de 32 bits para 64 bits representou um avanço significativo na capacidade de processamento e gerenciamento de memória dos computadores, impulsionando o desenvolvimento de aplicativos mais poderosos e eficientes.
+
+# Arquitetura do Arduino (extra)
+
+A arquitetura do Arduino varia dependendo do modelo da placa. A maioria dos modelos Arduino, como o popular Arduino Uno, utiliza microcontroladores de 8 bits da família Atmel AVR. No entanto, existem modelos mais avançados que utilizam microcontroladores de 32 bits, como o Arduino Due, que possui um processador ARM Cortex-M3.
+
+* **A maioria dos Arduinos:** Arquitetura de 8 bits.
+* **Alguns Arduinos avançados:** Arquitetura de 32 bits.
+
+Para entender melhor, aqui estão alguns pontos chave:
+
+* **Arduino Uno:**
+    * Utiliza o microcontrolador ATmega328P, que é um microcontrolador de 8 bits.
+* **Arduino Due:**
+    * Utiliza o microcontrolador Atmel SAM3X8E, que é um microcontrolador de 32 bits baseado na arquitetura ARM Cortex-M3.
+* **Modelos mais recentes:**
+    * Existem modelos mais recentes de Arduino que utilizam microcontroladores ARM Cortex de 32 bits, oferecendo maior poder de processamento.
+
+Essa variação na arquitetura permite que o Arduino seja utilizado em uma ampla gama de projetos, desde os mais simples até os mais complexos.
