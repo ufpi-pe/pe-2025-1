@@ -178,3 +178,15 @@ Para entender melhor, aqui estão alguns pontos chave:
     * Existem modelos mais recentes de Arduino que utilizam microcontroladores ARM Cortex de 32 bits, oferecendo maior poder de processamento.
 
 Essa variação na arquitetura permite que o Arduino seja utilizado em uma ampla gama de projetos, desde os mais simples até os mais complexos.
+
+# Arquitetura de Computadores (extra)
+
+[Arqutetura de Computadores](https://en.wikipedia.org/wiki/Computer_architecture)
+
+[Arquitetura 8 bits](https://en.wikipedia.org/wiki/8-bit_computing)
+
+[Arquitetura 16 bits](https://en.wikipedia.org/wiki/16-bit_computing)
+
+[Arquitetura 32 bits](https://en.wikipedia.org/wiki/32-bit_computing)
+
+[Arquitetura 64 bits](https://en.wikipedia.org/wiki/64-bit_computing)
