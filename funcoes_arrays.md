@@ -143,7 +143,7 @@ int main() {
 
     return 0;
 }
-
+```
 **Explicação Detalhada do Código**
 
 Gerencia dados de alunos usando **matrizes** (arrays bidimensionais) para armazenar nomes e notas separadamente.
