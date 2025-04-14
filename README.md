@@ -25,7 +25,7 @@ Programação Estruturada 2025-1
 
 [Funções e Arrays](https://github.com/ufpi-pe/pe-2025-1/blob/main/funcoes_arrays.md)
 
-[Estruturas em C (Struts)](TBD)
+[Estruturas em C (Struts)](https://github.com/ufpi-pe/pe-2025-1/blob/main/structs.md)
 
 [Alocação Dinâmica de Memória](TBD)
 
