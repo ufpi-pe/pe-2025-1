@@ -1,4 +1,4 @@
-# **AStructs (Estruturas) na Linguagem de Programação C**  
+# **Structs (Estruturas) na Linguagem de Programação C**  
 
 ## **Objetivos da Aula**  
 1. Compreender o conceito de **structs** em C.  
@@ -125,6 +125,142 @@ typedef struct {
 
 // Agora podemos declarar diretamente:
 Ponto p1 = {10, 20};
+```
+
+---
+
+### **8. Exemplos**
+
+Exemplo1: Cadastra N alunos em um vetor de alunos
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// Definição da struct Aluno
+struct Aluno {
+    char nome[50];
+    int idade;
+    float nota;
+};
+
+int main() {
+    int quantidade;
+    printf("Quantos alunos deseja cadastrar? ");
+    scanf("%d", &quantidade);
+    getchar(); // Limpa o buffer do teclado
+
+    struct Aluno turma[quantidade]; // Array de structs
+
+    // Cadastro dos alunos
+    for (int i = 0; i < quantidade; i++) {
+        printf("\nAluno %d:\n", i + 1);
+        
+        printf("Nome: ");
+        fgets(turma[i].nome, 50, stdin);
+        turma[i].nome[strcspn(turma[i].nome, "\n")] = '\0'; // Remove o \n do fgets
+
+        printf("Idade: ");
+        scanf("%d", &turma[i].idade);
+
+        printf("Nota: ");
+        scanf("%f", &turma[i].nota);
+        getchar(); // Limpa o buffer
+    }
+
+    // Listagem dos alunos cadastrados
+    printf("\n--- ALUNOS CADASTRADOS ---\n");
+    for (int i = 0; i < quantidade; i++) {
+        printf("\nAluno %d:\n", i + 1);
+        printf("Nome: %s\n", turma[i].nome);
+        printf("Idade: %d\n", turma[i].idade);
+        printf("Nota: %.2f\n", turma[i].nota);
+    }
+
+    // Cálculo da média da turma
+    float soma = 0;
+    for (int i = 0; i < quantidade; i++) {
+        soma += turma[i].nota;
+    }
+    float media = soma / quantidade;
+    printf("\nMédia da turma: %.2f\n", media);
+
+    return 0;
+}
+```
+
+Exemplo2: Cadastra N alunos em um vetor de alunos, refatorado para ser organizado em funções
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// Definição da struct Aluno
+struct Aluno {
+    char nome[50];
+    int idade;
+    float nota;
+};
+
+// Função para cadastrar alunos
+void cadastrarAlunos(struct Aluno turma[], int quantidade) {
+    for (int i = 0; i < quantidade; i++) {
+        printf("\nAluno %d:\n", i + 1);
+        
+        printf("Nome: ");
+        fgets(turma[i].nome, 50, stdin);
+        turma[i].nome[strcspn(turma[i].nome, "\n")] = '\0'; // Remove o \n do fgets
+
+        printf("Idade: ");
+        scanf("%d", &turma[i].idade);
+
+        printf("Nota: ");
+        scanf("%f", &turma[i].nota);
+        getchar(); // Limpa o buffer
+    }
+}
+
+// Função para listar alunos
+void listarAlunos(struct Aluno turma[], int quantidade) {
+    printf("\n--- ALUNOS CADASTRADOS ---\n");
+    for (int i = 0; i < quantidade; i++) {
+        printf("\nAluno %d:\n", i + 1);
+        printf("Nome: %s\n", turma[i].nome);
+        printf("Idade: %d\n", turma[i].idade);
+        printf("Nota: %.2f\n", turma[i].nota);
+    }
+}
+
+// Função para calcular a média
+float calcularMedia(struct Aluno turma[], int quantidade) {
+    float soma = 0;
+    for (int i = 0; i < quantidade; i++) {
+        soma += turma[i].nota;
+    }
+    return soma / quantidade;
+}
+
+int main() {
+    int quantidade;
+    
+    printf("Quantos alunos deseja cadastrar? ");
+    scanf("%d", &quantidade);
+    getchar(); // Limpa o buffer do teclado
+
+    struct Aluno turma[quantidade]; // Array de structs
+
+    // Cadastro dos alunos
+    cadastrarAlunos(turma, quantidade);
+
+    // Listagem dos alunos cadastrados
+    listarAlunos(turma, quantidade);
+
+    // Cálculo e exibição da média da turma
+    float media = calcularMedia(turma, quantidade);
+    printf("\nMédia da turma: %.2f\n", media);
+
+    return 0;
+}
 ```
 
 ---
