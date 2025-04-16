@@ -27,6 +27,6 @@ Programação Estruturada 2025-1
 
 [Estruturas em C (Struts)](https://github.com/ufpi-pe/pe-2025-1/blob/main/structs.md)
 
-[Alocação Dinâmica de Memória](TBD)
+[Alocação Dinâmica de Memória](https://github.com/ufpi-pe/pe-2025-1/blob/main/alocacao_dinamica.md)
 
 
