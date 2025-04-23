@@ -3,7 +3,9 @@
 ## **Objetivos**  
 1. Entender a diferença entre **alocação estática** e **alocação dinâmica**.  
 2. Aprender as funções básicas para alocação dinâmica em C (`malloc`, `free`).  
-3. Ver exemplos comparando alocação estática e dinâmica.  
+3. Ver exemplos comparando alocação estática e dinâmica.
+
+Observação: revise o uso e os conceitos de [ponteiros](https://github.com/ufpi-pe/pe-2025-1/blob/main/ponteiros.md) em C
 
 ---  
 
