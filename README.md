@@ -29,4 +29,6 @@ Programação Estruturada 2025-1
 
 [Alocação Dinâmica de Memória](https://github.com/ufpi-pe/pe-2025-1/blob/main/alocacao_dinamica.md)
 
+[Lida encadeada](https://github.com/ufpi-pe/pe-2025-1/blob/main/lista_encadeada.md)
+
 
