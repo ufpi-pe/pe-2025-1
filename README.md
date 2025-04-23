@@ -25,10 +25,10 @@ Programação Estruturada 2025-1
 
 [Funções e Arrays](https://github.com/ufpi-pe/pe-2025-1/blob/main/funcoes_arrays.md)
 
-[Estruturas em C (Struts)](https://github.com/ufpi-pe/pe-2025-1/blob/main/structs.md)
+[Estruturas em C (Structs)](https://github.com/ufpi-pe/pe-2025-1/blob/main/structs.md)
 
 [Alocação Dinâmica de Memória](https://github.com/ufpi-pe/pe-2025-1/blob/main/alocacao_dinamica.md)
 
-[Lida encadeada](https://github.com/ufpi-pe/pe-2025-1/blob/main/lista_encadeada.md)
+[Lista encadeada](https://github.com/ufpi-pe/pe-2025-1/blob/main/lista_encadeada.md)
 
 
