@@ -31,4 +31,9 @@ Programação Estruturada 2025-1
 
 [Lista encadeada](https://github.com/ufpi-pe/pe-2025-1/blob/main/lista_encadeada.md)
 
+## Módulo 3 
+[Conceitos básicos sobre arquivos](https://github.com/ufpi-pe/pe-2025-1/blob/main/arquivos.md)
+
+[Manipulando arquivos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/arquivos_c.md)
+
 
