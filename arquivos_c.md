@@ -104,7 +104,7 @@ Exemplo para arquivos binários:
 
 ---
 
-# Exemplo Simples de Manipulação de Arquivos em C
+# Exemplo de Manipulação de Arquivos em C
 
 Programa que demonstra as operações básicas com arquivos em C:
 
@@ -191,6 +191,95 @@ Linha 2 do arquivo.
 - O arquivo `exemplo.txt` será criado no mesmo diretório do programa
 - Se o arquivo já existir, seu conteúdo será substituído (devido ao modo `"w"`)
 - Para adicionar conteúdo sem substituir, use o modo `"a"` (append)
+
+# Exemplo de programa que copia o conteúdo de um arquivo
+
+Programa que copia o conteúdo de um arquivo de origem para um arquivo de destino. 
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#define BUFSIZE 100
+
+int main() {
+    FILE *infile, *outfile;
+    char buffer[BUFSIZE];
+    size_t bytes_read;
+
+    infile = fopen("origem.txt", "r");
+    outfile = fopen("destino.txt", "w");
+
+    if (infile == NULL || outfile == NULL) {
+        printf("Erro ao abrir arquivos!\n");
+        exit(1);
+    }
+
+    while ((bytes_read = fread(buffer, 1, BUFSIZE, infile)) > 0) {
+        fwrite(buffer, 1, bytes_read, outfile);
+    }
+
+    fclose(infile);
+    fclose(outfile);
+    return 0;
+}
+```
+
+
+## Inclusões e Definição
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#define BUFSIZE 100
+```
+- `stdio.h`: Biblioteca padrão para operações de entrada/saída
+- `stdlib.h`: Biblioteca para funções gerais como `exit()`
+- `BUFSIZE 100`: Define o tamanho do buffer como 100 bytes
+
+## Variáveis
+```c
+FILE *infile, *outfile;
+char buffer[BUFSIZE];
+size_t bytes_read;
+```
+- `infile`: Ponteiro para o arquivo de origem
+- `outfile`: Ponteiro para o arquivo de destino
+- `buffer`: Array de caracteres para armazenar dados lidos
+- `bytes_read`: Variável para armazenar quantos bytes foram lidos
+
+## Abertura dos Arquivos
+```c
+infile = fopen("origem.txt", "r");
+outfile = fopen("destino.txt", "w");
+```
+- Abre "origem.txt" em modo leitura ("r")
+- Abre "destino.txt" em modo escrita ("w"), criando o arquivo se não existir ou truncando se existir
+
+## Verificação de Erros
+```c
+if (infile == NULL || outfile == NULL) {
+    printf("Erro ao abrir arquivos!\n");
+    exit(1);
+}
+```
+- Se qualquer um dos arquivos falhar ao abrir, imprime mensagem de erro e termina o programa com código 1
+
+## Loop de Cópia
+```c
+    while ((bytes_read = fread(buffer, 1, BUFSIZE, infile)) > 0) {
+        fwrite(buffer, 1, bytes_read, outfile);
+    }
+```
+- `fread()` lê até `BUFSIZE` bytes (100) do arquivo de origem para o buffer
+- `bytes_read` recebe o número de bytes realmente lidos
+- `fwrite()` escreve os bytes lidos no arquivo de destino
+- O loop continua até que `fread()` retorne 0 (fim do arquivo)
+
+## Fechamento dos Arquivos
+```c
+fclose(infile);
+fclose(outfile);
+```
+- Libera os recursos dos arquivos abertos
 
 ## Conclusão
 - Arquivos em C são essenciais para persistência de dados.
