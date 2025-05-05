@@ -92,6 +92,40 @@ void lst_libera(Lista* lst) {
 }
 ```
 
+### 6. Remoção de um nó
+
+```c
+// Remove um elemento da lista
+Lista* lst_remove(Lista* lst, int val) {
+    Lista* ant = NULL;  // Ponteiro para o elemento anterior
+    Lista* p = lst;     // Ponteiro para percorrer a lista
+    
+    // Procura o elemento na lista, guardando o anterior
+    while (p != NULL && p->info != val) {
+        ant = p;
+        p = p->prox;
+    }
+    
+    // Verifica se encontrou o elemento
+    if (p == NULL) {
+        printf("Elemento %d não encontrado na lista.\n", val);
+        return lst;  // Não encontrou: retorna a lista original
+    }
+    
+    // Remove o elemento
+    if (ant == NULL) {
+        // Remove do início
+        lst = p->prox;
+    } else {
+        // Remove do meio/fim
+        ant->prox = p->prox;
+    }
+    
+    free(p);
+    return lst;
+}
+```
+
 ## Exemplo Completo
 
 ```c
