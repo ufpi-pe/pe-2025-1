@@ -109,6 +109,11 @@ fsck /dev/sda1  # Verificar e reparar sistema de arquivos
 ```
 
 ### **6.2. Programação em C para Manipulação de Arquivos**  
+
+**Criando um arquivo**
+
+Cria o arquivo `exemplo.txt` e insere o conteúdo com a linha `Hello, File System!`
+
 ```c
 #include <stdio.h>
 int main() {
@@ -123,7 +128,66 @@ int main() {
 }
 ```
 
+**Adicionando um conteúdo a um arquivo que já existe**
+
+Abre o arquivo `exemplo.txt` e insere mais um linha `Hello, File System!`
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("exemplo.txt", "a");  // Modo append (adiciona ao final)
+    
+    if (file == NULL) {
+        perror("Erro ao abrir arquivo");
+        return 1;
+    }
+    
+    fprintf(file, "Hello, File System!\n");  // Escreve no final do arquivo
+    fclose(file);  // Fecha o arquivo
+    
+    return 0;
+}
+```
+
+**Lendo o conteúdo de um arquivo**
+
+Ler o conteúdo texto do arquivo `exemplo.txt`
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("exemplo.txt", "r");  // Open in read mode
+    
+    if (file == NULL) {
+        perror("Erro ao abrir o arquivo");
+        return 1;
+    }
+
+    printf("Conteudo de 'exemplo.txt':\n");
+    
+    // Read and print each line
+    char buffer[256];  // Buffer to store each line
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
+        printf("%s", buffer);
+    }
+
+    fclose(file);  // Close the file
+    return 0;
+}
+```
+
+### **Principais Modos de Acesso a um Arquivo em C:**
+| Modo | Descrição |
+|------|-----------|
+| `"w"` | Escrita (sobrescreve o arquivo se existir) |
+| `"a"` | Append (adiciona no final do arquivo) |
+| `"r"` | Leitura (apenas leitura, erro se o arquivo não existir) |
+
+
 ---
 
 ## **7. Conclusão**  
+
 Os sistemas de arquivos são fundamentais para a computação moderna, garantindo **armazenamento eficiente, organização e segurança** dos dados. Compreender sua estrutura e funcionamento é essencial para administradores de sistemas, desenvolvedores e profissionais de infraestrutura.  
