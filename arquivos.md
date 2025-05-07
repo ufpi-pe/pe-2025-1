@@ -1,4 +1,4 @@
-# Uma Instrodução a Sistemas de Arquivos de Sistemas Computacionais
+# Uma Introdução a Sistemas de Arquivos de Sistemas Computacionais
 
 ## **1. Introdução**  
 Os **sistemas de arquivos** são componentes essenciais dos sistemas operacionais, responsáveis por gerenciar o armazenamento, organização, acesso e recuperação de dados em dispositivos como discos rígidos (HDDs), SSDs e mídias removíveis. Eles fornecem uma **abstração** que permite aos usuários e aplicações manipular dados sem se preocupar com detalhes físicos do armazenamento.  
