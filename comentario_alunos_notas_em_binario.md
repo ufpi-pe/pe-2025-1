@@ -1,4 +1,4 @@
-# Explicação do Código em C: Sistema de Alunos com Notas
+# Explicação do Código: Sistema de Alunos com Notas
 
 Este código implementa um sistema para gerenciar alunos e suas notas, com persistência em arquivo binário. Vamos analisá-lo em partes:
 
