@@ -16,53 +16,55 @@ typedef struct aluno {
 } Aluno;
 ```
 
-- **Node**: Representa uma nota individual, usando uma lista encadeada simples.
-- **Aluno**: Armazena o nome do aluno e um ponteiro para a lista de notas.
+1. **Node**: Representa uma nota individual com:
+   - `nota` (float): valor da nota
+   - `proximo` (ponteiro): aponta para a próxima nota na lista
 
-## Funções de Gerenciamento de Memória
+2. **Aluno**: Armazena informações do aluno com:
+   - `nome` (string): nome do aluno (até 100 caracteres)
+   - `notas` (ponteiro): aponta para a lista de notas do aluno
 
-1. **libera_notas()**: Libera a memória de uma lista encadeada de notas.
-2. **libera_aluno()**: Libera a memória de um aluno, incluindo suas notas.
+## Funções Principais
 
-## Funções de Criação
+### Manipulação de Memória
+- `libera_notas()`: Libera memória de uma lista encadeada de notas
+- `libera_aluno()`: Libera memória de um aluno e suas notas
+- `cria_no_nota()`: Aloca memória para uma nova nota
+- `cria_no_aluno()`: Aloca memória para um novo aluno
 
-1. **cria_no_nota()**: Aloca memória para uma nova nota e a inicializa.
-2. **cria_no_aluno()**: Aloca memória para um novo aluno e copia seu nome.
+### Operações com Listas
+- `insere_nota()`: Adiciona uma nova nota no início da lista de notas
 
-## Funções de Manipulação
+### Operações com Arquivos
+- `salva_aluno_em_arquivo_binario()`: Escreve os dados de um aluno em um arquivo binário
+- `ler_aluno_de_arquivo_binario()`: Lê os dados de um aluno de um arquivo binário
 
-1. **insere_nota()**: Adiciona uma nova nota no início da lista encadeada.
-2. **salva_aluno_em_arquivo_binario()**: Salva os dados de um aluno em arquivo binário.
-3. **ler_aluno_de_arquivo_binario()**: Lê os dados de um aluno do arquivo binário.
+## Fluxo do Programa (main())
 
-## Função main()
+1. **Criação e salvamento de alunos**:
+   - Cria dois alunos (Maria Joaquina e Ana Julia Silva)
+   - Adiciona notas a cada aluno
+   - Salva no arquivo "alunos.bin" (primeiro em modo "wb", depois em "ab")
 
-Demonstra o uso das funções:
+2. **Leitura e exibição**:
+   - Abre o arquivo em modo leitura ("rb")
+   - Lê e exibe todos os alunos armazenados
+   - Para cada aluno, mostra nome e lista de notas
 
-1. Cria dois alunos (Maria Joaquina e Ana Julia Silva) com suas respectivas notas.
-2. Salva-os em um arquivo binário "alunos2.bin".
-3. Lê e exibe todos os alunos do arquivo.
+## Formato do Arquivo Binário
 
-## Fluxo do Programa
+Para cada aluno, o arquivo armazena:
+1. Tamanho do nome (int)
+2. Nome do aluno (chars)
+3. Quantidade de notas (int)
+4. Lista de notas (floats)
 
-1. **Escrita no arquivo**:
-   - Para cada aluno, armazena:
-     - Tamanho do nome (int)
-     - Nome (array de char)
-     - Quantidade de notas (int)
-     - Notas (valores float)
-
-2. **Leitura do arquivo**:
-   - Lê os dados na mesma ordem em que foram escritos.
-   - Reconstrói a estrutura de alunos e notas na memória.
-
-## Pontos Importantes
-
+## Observações Importantes
 - Uso de lista encadeada para armazenar notas de forma dinâmica.
-- Persistência de dados em arquivo binário.
 - Tratamento de erros em operações de arquivo e alocação de memória.
-- Liberação cuidadosa de memória alocada dinamicamente.
-- Verificação de consistência dos dados lidos do arquivo.
+- Garante que strings sejam terminadas corretamente com '\0'
+- Verifica limites de tamanho para evitar overflow
+- Libera toda memória alocada quando não é mais necessária
 
 ## Exemplo de Saída
 
