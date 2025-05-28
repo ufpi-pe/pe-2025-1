@@ -1,6 +1,6 @@
-# Explicação do Código da Calculadora Científica em C
+# Explicação do Código da Mni-Calculadora Científica em C
 
-Este programa é uma calculadora científica modular que implementa várias operações matemáticas.
+Este programa é uma mini-calculadora científica modular que implementa várias operações matemáticas.
 
 ## Estrutura do Projeto
 
