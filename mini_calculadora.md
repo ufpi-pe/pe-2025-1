@@ -6,9 +6,9 @@ Este programa é uma calculadora científica modular que implementa várias oper
 
 O projeto está organizado em 3 arquivos:
 
-1. **operacoes.h** - Cabeçalho com declarações das funções
-2. **operacoes.c** - Implementação das funções matemáticas
-3. **main.c** - Interface do usuário e lógica principal
+1. **[operacoes.h](https://github.com/ufpi-pe/pe-2025-1/blob/main/operacoes.h)** - Cabeçalho com declarações das funções
+2. **[operacoes.c](https://github.com/ufpi-pe/pe-2025-1/blob/main/operacoes.c)** - Implementação das funções matemáticas
+3. **[main](https://github.com/ufpi-pe/pe-2025-1/blob/main/main.c).c** - Interface do usuário e lógica principal
 
 ## 1. operacoes.h - Definições
 
