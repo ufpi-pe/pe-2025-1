@@ -100,8 +100,3 @@ void loop() {
 **Material de Apoio:**  
 - [Site Oficial do Arduino](https://www.arduino.cc/)  
 - [Tinkercad (simulação online)](https://www.tinkercad.com/)  
-
----  
-**Pronto para a prática? Vamos começar!** 🚀  
-
-Se precisar de ajustes ou mais detalhes, é só pedir!
