@@ -44,14 +44,14 @@
 ```cpp
 void setup() {
   // Configurações iniciais (executa uma vez)
-  pinMode(13, OUTPUT); // Define o pino 13 como saída
+  pinMode(12, OUTPUT); // Define o pino 12 como saída
 }
 
 void loop() {
   // Código principal (repete infinitamente)
-  digitalWrite(13, HIGH); // Liga o LED
+  digitalWrite(12, HIGH); // Liga o LED
   delay(1000);            // Espera 1 segundo
-  digitalWrite(13, LOW);  // Desliga o LED
+  digitalWrite(12, LOW);  // Desliga o LED
   delay(1000);            // Espera 1 segundo
 }
 ```
@@ -69,7 +69,7 @@ void loop() {
 - Protoboard  
 
 ### **Montagem do Circuito:**  
-1. Conecte o **ânodo (+) do LED** ao **pino digital 13** do Arduino.  
+1. Conecte o **ânodo (+) do LED** ao **pino digital 12** do Arduino.  
 2. Conecte o **cátodo (-) do LED** a um **resistor (220Ω)**.  
 3. Ligue o resistor ao **GND (terra)** do Arduino.  
 
@@ -80,7 +80,7 @@ void loop() {
 - Clique em **Upload** (seta para a direita).  
 
 ### **Resultado Esperado:**  
-- O LED conectado ao pino 13 deve piscar a cada 1 segundo.  
+- O LED conectado ao pino 12 deve piscar a cada 1 segundo.  
 
 ---  
 
