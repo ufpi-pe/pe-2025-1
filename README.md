@@ -38,5 +38,5 @@ Programação Estruturada 2025-1
 
 ## Módulo 4
 
-[Introdução ao Arduino](https://docs.google.com/document/d/1RbjXK-do514dKjitjJi3mcOkyAkQvily_rMaNmj-G1w/edit?usp=sharing)
+[Introdução ao Arduino](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_01.md)
 
