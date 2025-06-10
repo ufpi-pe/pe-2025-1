@@ -95,7 +95,6 @@ void loop() {
 ## **7. Conclusão**  
 - O Arduino é uma ferramenta poderosa para aprender eletrônica e programação.  
 - Com poucos componentes, já é possível criar projetos interativos.  
-- Próximas aulas podem abordar sensores, motores e comunicação serial.  
 
 **Material de Apoio:**  
 - [Site Oficial do Arduino](https://www.arduino.cc/)  
