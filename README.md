@@ -36,4 +36,7 @@ Programação Estruturada 2025-1
 
 [Manipulando arquivos em C](https://github.com/ufpi-pe/pe-2025-1/blob/main/arquivos_c.md)
 
+## Módulo 4
+
+[Introdução ao Arduino](TBD)
 
