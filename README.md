@@ -40,3 +40,5 @@ Programação Estruturada 2025-1
 
 [Introdução ao Arduino](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_01.md)
 
+[Liga/desliga um LED usando um botão push/release](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_02.md)
+
