@@ -44,3 +44,5 @@ Programação Estruturada 2025-1
 
 [Altera a intensidade de luz de um LED com um potenciômetro](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_03.md)
 
+[Controle de Cores de um LED RGB com 3 Potenciômetros](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_03.md)
+
