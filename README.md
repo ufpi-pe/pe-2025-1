@@ -42,3 +42,5 @@ Programação Estruturada 2025-1
 
 [Liga/desliga um LED usando um botão push/release](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_02.md)
 
+[Altera a intensidade de luz de um LED com um potenciômetro](https://github.com/ufpi-pe/pe-2025-1/blob/main/arduino_aula_03.md)
+
